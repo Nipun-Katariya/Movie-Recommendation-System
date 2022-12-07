@@ -1,0 +1,27 @@
+table {
+    width: fit-content;
+    table-layout: auto;
+    border-radius: 5px;
+  }
+    
+td {
+    border: 2px solid;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+}
+.header {
+    text-align: center;
+}
+#search_box {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+}
+
+/** {
+    background-color: lightskyblue;
+}*/
