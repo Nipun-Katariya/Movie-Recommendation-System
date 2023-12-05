@@ -27,7 +27,8 @@ def main():
         value = request.form.get("search", type = str)
         movie_name = str(value)
 
-        movies_data = pd.read_csv('movies.csv')
+        # movies_data = pd.read_csv('movies.csv')
+        movies_data = pd.read_csv('/home/NipunKatariya/Movie-Recommendation-System/movies.csv')
         selected_features = ['genres','keywords','tagline','cast','director']
 
         # replacing the null valuess with null string
@@ -68,7 +69,7 @@ def main():
         for movie in recommended_movies:
             m = movie
             m = m.replace(" ", "+")
-            url = "http://www.omdbapi.com/?t="+m+"&apikey=6d31dee3"
+            url = "http://www.omdbapi.com/?t="+m+"&apikey=a0d96125"
             json_file = json.loads(requests.get(url).text)
             poster = json_file["Poster"]
             u = json_file["imdbID"]
